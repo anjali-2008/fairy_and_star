@@ -1,4 +1,4 @@
-var starImg, fairyImg, bgImg;
+var starImg, fairyImg//, bgImg;
 var fairy , fairyVoice;
 var star, starBody;
   
@@ -8,10 +8,10 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
 
-function preload()
-{ starImg = loadImage("images/star.png");
+function preload(){
+starImg = loadImage("images/star.png");
 fairyImg = loadAnimation("images/fairy1.png","images/fairy2.png");
-bgImg = loadImage("images/starNight.png"); 
+// bgImg = loadImage("images/starNight.png"); 
 fairyVoice = loadSound("sound/JoyMusic.mp3"); }
   
   function setup() { 
@@ -29,7 +29,7 @@ World.add(world, starBody);
 Engine.run(engine);
 }
 function draw() {
-background(bgImg);
+background("black");
 star.x= starBody.position.x
 star.y= starBody.position.y
 console.log(star.y);
